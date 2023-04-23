@@ -27,7 +27,7 @@ let account = {
     alert(`Expenses you have: \n ${expenseList.join(" \n ")}`);
   },
   getSummary: function(){ 
-    let totalIncome = this.income.reduce((sum, income) => sum + income, 0);
+  let totalIncome = this.income.reduce((sum, income) => sum + income, 0);
   let totalExpenses = this.expenses.reduce((sum, expense) => sum + expense.amount, 0);
   let balance = totalIncome - totalExpenses;
 
@@ -51,7 +51,7 @@ do{
   if(choice===2){
     let expenseType = prompt("Enter the expense type:");
     let expenseAmount = parseInt(prompt("Enter the expense amount:"));
-    account.addExpenses(expenseAmount, expenseType);
+    account.addExpenses(expenseType, expenseAmount);
   }
   if(choice===3){
     account.listExpenses();
